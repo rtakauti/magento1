@@ -1,0 +1,27 @@
+{
+  "require": {
+    "magium/magento": ">=0.0.22 <2.0.0",
+    "squizlabs/php_codesniffer": "2.6.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "VindiTest\\": "VindiTest",
+      "Vindi\\": "Vindi"
+    },
+    "files": [
+      "register.php"
+    ]
+  },
+  "scripts": {
+    "test": "phpunit",
+    "style": "./vendor/bin/phpcs  --standard=MEQP1/ruleset.xml --ignore=*/tests/* --severity=10 --extensions=php,phtml ../../Subscription/",
+    "fix": "./vendor/bin/phpcbf  --standard=MEQP1/ruleset.xml --ignore=*/tests/* ../../Subscription/",
+    "post-install-cmd": "./vendor/bin/phpcs --config-set installed_paths ../../..",
+    "post-update-cmd": "./vendor/bin/phpcs --config-set installed_paths ../../.."
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
