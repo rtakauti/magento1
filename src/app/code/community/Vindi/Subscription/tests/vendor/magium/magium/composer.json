@@ -1,0 +1,40 @@
+{
+  "name" : "magium/magium",
+  "type": "library",
+  "description": "A browser/functional testing suite using Web Driver.  Contains low-ish level functionality to quickly build browser/functional tests.",
+  "keywords": ["selenium", "webdriver", "testing"],
+  "homepage": "https://github.com/magium/Magium",
+  "license": "ASL-2.0",
+  "bin": [
+    "bin/magium"
+  ],
+  "authors": [
+    {
+      "name": "Kevin Schroeder",
+      "email": "kschroeder@mirageworks.com",
+      "homepage": "http://eschrade.com/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "zendframework/zend-di" : "^2.5.1",
+    "facebook/webdriver" : "^1.1.1",
+    "zendframework/zend-log": "^2.6.0",
+    "zendframework/zend-i18n": "^2.5.1",
+    "zendframework/zend-cache": "^2.5.3",
+    "symfony/console": "^2|^3",
+    "zendframework/zend-config": "2.6.0",
+    "zendframework/zend-json": "^2.6.1",
+    "phpunit/phpunit": "^5|^6"
+  },
+  "repositories" : [ {
+    "type" : "composer",
+    "url" : "https://packagist.org/"
+  } ],
+  "autoload" : {
+    "psr-4" : {
+      "Magium\\" : "lib/",
+      "Tests\\Magium\\" : "tests/"
+    }
+  }
+}
