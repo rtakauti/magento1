@@ -1,9 +1,0 @@
-<phpunit bootstrap="../vendor/autoload.php">
-    <testsuites>
-        <testsuite name="All Tests">
-            <directory>./Magento18</directory>
-            <directory>./MagentoEE114</directory>
-            <directory>./Magento</directory>
-        </testsuite>
-    </testsuites>
-</phpunit>
